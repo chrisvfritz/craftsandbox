@@ -8,5 +8,17 @@
  */
 
 return array(
+  '*' => array(
+    'omitScriptNameInUrls' => true,
+  ),
 
+  'devMode' => true,
+
+  'localhost/craftcms/public/' => array(
+    'devMode' => true,
+    'environmentVariables' => array(
+      'basePath' => 'C:\wamp\www\craftcms\public/',
+      'baseUrl'  => 'localhost/craftcms/public',
+    )
+  )
 );

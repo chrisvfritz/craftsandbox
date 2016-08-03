@@ -17,7 +17,7 @@
   <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
   <meta name="description" content="A page template using MSUBootstrap.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="{{ SiteURL }}/vendor/msu-bootstrap/css/MSUBootstrap.min.css">
+  {% includeCssFile siteUrl~'vendor/msu-bootstrap/css/MSUBootstrap.min.css' %}
   <link rel="home" href="{{ siteUrl }}" />
 </head>
 
@@ -39,8 +39,8 @@
           <!-- if using a dark background change the img src to img/masthead-helmet-white.png-->
           <!-- this img "onerror" attribute allows non-SVG capable browsers to render the image -->
           <img class="screen-msugraphic" alt="Michigan State University"
-            src="vendor/msu-bootstrap/img/masthead-helmet-green.svg"
-            onerror="this.src='vendor/msu-bootstrap/img/masthead-helmet-green.png'"
+            src="{{ siteUrl }}vendor/msu-bootstrap/img/masthead-helmet-green.svg"
+            onerror="this.src='{{ siteUrl }}vendor/msu-bootstrap/img/masthead-helmet-green.png'"
           >
           <!-- MSU Web Standards indicate the MSU masthead graphic should be printed black -->
         </a>
@@ -48,6 +48,9 @@
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="navbar-search-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="{{ url('news') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>News</a></li>
+        </ul>
         <form action="http://u.search.msu.edu/index.php" method="get" class="navbar-form navbar-right" role="search" >
           <div class="form-group">
             <input type="hidden" name="client" value="YOUR SITE">
@@ -69,21 +72,10 @@
   </nav>
 
   <div class="container" id="content" role="main">
+    {% block content %}
 
+    {% endblock %}
 
-      <nav>
-        <ul>
-          <li><a href="{{ url('news') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>News</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main id="content" role="main">
-      {% block content %}
-        <p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
-        <p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
-      {% endblock %}
-    </main>
 
     <!-- Footer
     ================================================== -->
@@ -115,18 +107,18 @@
           <!-- If using a dark background change the img src to images/msu-wordmark-white-221x47.png-->
           <img class='screen-msuwordmark' alt='Michigan State University Wordmark'
               width="221"
-              src="img/msu-wordmark-green.svg"
-              onerror="this.src='img/msu-wordmark-green-221x47.png'"
+              src="{{ siteUrl }}vendor/msu-bootstrap/img/msu-wordmark-green.svg"
+              onerror="this.src='vendor/msu-bootstrap/img/msu-wordmark-green-221x47.png'"
           >
           <img class='print-msuwordmark' alt='Michigan State University Wordmark'
-          src='img/msu-wordmark-black-221x47.png'>
+          src='{{ siteUrl }}vendor/msu-bootstrap/img/msu-wordmark-black-221x47.png'>
         </a>
       </div>
     </footer>
-  </div>
+  </div><!-- /.container -->
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="{{ SiteURL }}/vendor/msu-bootstrap/js/bootstrap.min.js"></script>
+  <script src="{{ siteUrl }}vendor/msu-bootstrap/js/bootstrap.min.js"></script>
 
   <!-- Fixes skip to content links in some browsers -->
   <script>
