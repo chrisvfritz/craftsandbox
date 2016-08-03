@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="utf-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <title>PAGE TEMPLATE</title>
+       <meta name="description" content="A page template for the MSUBootstrap.">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" href="vendor/msu-bootstrap/css/MSUBootstrap.min.css">
+   </head>
+   <body>
+       <!-- Unified Masthead
+       ================================================== -->
+       <a class="sr-only skip-main" href="#content" accesskey="S">Skip to main content</a>
+       <nav id="msu-masthead" class="navbar navbar-default navbar-static-top" role="navigation">
+           <div class="container">
+               <!-- Brand and toggle get grouped for better mobile display -->
+               <div class="navbar-header">
+                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-search-collapse">
+                       <span class="sr-only">Toggle navigation</span>
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                   </button>
+                   <a class="msu-masthead-image" href="http://msu.edu" title="Michigan State University">
+                       <!-- if using a dark background change the img src to img/masthead-helmet-white.png-->
+                       <!-- this img "onerror" attribute allows non-SVG capable browsers to render the image -->
+                       <img class="screen-msugraphic" alt="Michigan State University"
+                           src="img/masthead-helmet-green.svg"
+                           onerror="this.src='img/masthead-helmet-green.png'"
+                       >
+                       <!-- MSU Web Standards indicate the MSU masthead graphic should be printed black -->
+                   </a>
+               </div>
+
+               <!-- Collect the nav links, forms, and other content for toggling -->
+               <div class="collapse navbar-collapse" id="navbar-search-collapse">
+                   <form action="http://u.search.msu.edu/index.php" method="get" class="navbar-form navbar-right" role="search" >
+                       <div class="form-group">
+                           <input type="hidden" name="client" value="YOUR SITE">
+                           <input type="hidden" name="sitesearch" value="YOURSITE.msu.edu" />
+                           <label for="globalsearch" class="sr-only">Search MSU</label>
+                           <div class="input-group" style="width: 330px;">
+                               <input type="text" accesskey="4" id="globalsearch" name="q" class="form-control" placeholder="Search for people, places, and things">
+                               <span class="input-group-btn">
+                                   <button class="btn btn-default" type="submit">
+                                       <span class="glyphicon glyphicon-search" role="presentation"></span>
+                                       <span class="sr-only">Search</span>
+                                   </button>
+                               </span>
+                           </div>
+                       </div>
+                   </form>
+               </div><!-- /.navbar-collapse -->
+           </div><!-- /.container -->
+       </nav>
+
+       <div class="container" id="content" role="main">
+           <!-- Main Site Content
+           ================================================== -->
+           <div class="jumbotron">
+               <h1>Hello World!</h1>
+               <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p>
+               <p><a class="btn btn-lg btn-success" href="#" role="button">Get started today</a></p>
+           </div>
+
+           <!-- Example row of columns -->
+           <div class="row">
+               <div class="col-md-4">
+                   <h2>Heading</h2>
+                   <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                   <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+               </div>
+               <div class="col-md-4">
+                   <h2>Heading</h2>
+                   <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                   <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+               </div>
+               <div class="col-md-4">
+                   <h2>Heading</h2>
+                   <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                   <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+               </div>
+           </div>
+
+           <!-- Footer
+           ================================================== -->
+           <footer class='row clearfix light-background'  id='standard-MSU-footer' role="contentinfo">
+               <div class='col-md-9'>
+                   <div id='standard-footer-site-links'>
+                       <ul>
+                           <li>Call for Help: <strong>(517) 555-5555</strong></li>
+                           <li><a href='#'>Contact Information</a></li>
+                           <li><a href='#'>Privacy Policy</a></li>
+                           <li><a href='#'>Acceptable Use Policy</a></li>
+                       </ul>
+                   </div>
+                   <div class='clearfix' id='standard-footer-MSU-info'>
+                       <ul class='msu-info-list'>
+                           <li>Call MSU: <strong><span class='msu-phone'>(517) 355-1855</span></strong></li>
+                           <li>Visit: <strong><a href='http://msu.edu'>msu.edu</a></strong></li>
+                           <li>MSU is an affirmative-action, <span>equal-opportunity employer.</span></li>
+                       </ul>
+                       <ul class='copyright'>
+                           <li class='spartans-will'>Spartans Will.</li>
+                           <li>&#169; Michigan State University</li>
+                       </ul>
+                   </div>
+               </div>
+               <div class='col-md-3' id='standard-footer-MSU-wordmark'>
+                   <a href='http://www.msu.edu'>
+                       <!-- If using a dark background change the img src to images/msu-wordmark-white-221x47.png-->
+                       <img class='screen-msuwordmark' alt='Michigan State University Wordmark'
+                           width="221"
+                           src="img/msu-wordmark-green.svg"
+                           onerror="this.src='img/msu-wordmark-green-221x47.png'"
+                       >
+                       <img class='print-msuwordmark' alt='Michigan State University Wordmark'
+                       src='img/msu-wordmark-black-221x47.png'>
+                   </a>
+               </div>
+           </footer>
+       </div>
+
+       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+       <script src="js/bootstrap.min.js"></script>
+
+       <!-- Fixes skip to content links in some browsers -->
+       <script>
+           window.addEventListener("hashchange", function(event) {
+               var element = document.getElementById(location.hash.substring(1));
+
+               if (element) {
+                   if (!/^(?:a|select|input|button|textarea)$/i.test(element.tagName)) {
+                       element.tabIndex = -1;
+                   }
+                   element.focus();
+               }
+           }, false);
+       </script>
+
+       <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+       <script>
+           (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+           function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+           e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+           e.src='//www.google-analytics.com/analytics.js';
+           r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+           ga('create','UA-XXXXX-X');ga('send','pageview');
+       </script>
+   </body>
+</html>
