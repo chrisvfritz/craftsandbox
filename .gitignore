@@ -6,7 +6,8 @@ sftp-config.json
 craft/config/db.php
 
 # Vendor files
-public/vendor
+public/vendor/msu-bootstrap
+public/vendor/bootstrap
 
 # Windows? Google Drive? Who knows?
 desktop.ini
