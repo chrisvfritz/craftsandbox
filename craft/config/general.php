@@ -11,12 +11,17 @@ return array(
   '*' => array(
     'omitScriptNameInUrls' => true,
     'devMode' => true,
+    'generateTransformsBeforePageLoad' => true,
+    'environmentVariables' => array(
+      'basePath' => 'C:\wamp\www\craftcms\public',
+      'baseUrl'  => 'localhost/craftcms/public/',
+    )
   ),
 
   'localhost/craftcms/public/' => array(
     'environmentVariables' => array(
-      'basePath' => 'C:\wamp\www\craftcms\public/',
-      'baseUrl'  => 'localhost/craftcms/public',
+      'basePath' => 'C:\wamp\www\craftcms\public',
+      'baseUrl'  => 'localhost/craftcms/public/',
     )
   )
 );

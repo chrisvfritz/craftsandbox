@@ -2,15 +2,20 @@
 {% set title = "Blog" %}
 
 {% block content %}
-	<h1>Blog</h1>
+  <h1>Blog</h1>
 
-	{% for entry in craft.entries.section('blog').find() %}
-		{% set featuredImage = entry.featuredImage.first() %}
-		<article>
-			<h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
-			<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
-			<img src="{{ featuredImage.getUrl('thumb') }}" alt="{{ featuredImage.altText }}">
-			<p>{{ entry.summary }}</p>
-		</article>
-	{% endfor %}
+  <div class="card-deck">
+    {% for entry in craft.entries.section('blog').find() %}
+    {% set featuredImage = entry.featuredImage.first() %}
+    <article class="card">
+      <img class="card-img-top img-responsive" src="{{ featuredImage.getUrl('thumb') }}" alt="{{ featuredImage.altText }}">
+      <div class="card-block">
+        <h4 class="card-title"><a href="{{ entry.url }}">{{ entry.title }}</a></h4>
+        <p class="card-text">{{ entry.summary }}</p>
+        <p class="card-text"><small class="text-muted">Published {{ entry.postDate.format('F d, Y') }}</small></p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+
 {% endblock %}
