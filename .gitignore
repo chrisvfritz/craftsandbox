@@ -7,3 +7,6 @@ craft/config/db.php
 
 # Vendor files
 public/vendor
+
+# Windows? Google Drive? Who knows?
+desktop.ini
