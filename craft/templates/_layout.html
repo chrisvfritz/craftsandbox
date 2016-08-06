@@ -17,7 +17,7 @@
   <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
   <meta name="description" content="A page template using MSUBootstrap.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% includeCssFile siteUrl~'vendor/msu-bootstrap/css/MSUBootstrap.min.css' %}
+  {% includeCssFile siteUrl~'build/app.css' %}
   <link rel="home" href="{{ siteUrl }}" />
 </head>
 
@@ -39,8 +39,8 @@
           <!-- if using a dark background change the img src to img/masthead-helmet-white.png-->
           <!-- this img "onerror" attribute allows non-SVG capable browsers to render the image -->
           <img class="screen-msugraphic" alt="Michigan State University"
-            src="{{ siteUrl }}vendor/msu-bootstrap/img/masthead-helmet-green.svg"
-            onerror="this.src='{{ siteUrl }}vendor/msu-bootstrap/img/masthead-helmet-green.png'"
+            src="{{ siteUrl }}img/masthead-helmet-green.svg"
+            onerror="this.src='{{ siteUrl }}img/masthead-helmet-green.png'"
           >
           <!-- MSU Web Standards indicate the MSU masthead graphic should be printed black -->
         </a>
@@ -107,18 +107,17 @@
           <!-- If using a dark background change the img src to images/msu-wordmark-white-221x47.png-->
           <img class='screen-msuwordmark' alt='Michigan State University Wordmark'
               width="221"
-              src="{{ siteUrl }}vendor/msu-bootstrap/img/msu-wordmark-green.svg"
-              onerror="this.src='vendor/msu-bootstrap/img/msu-wordmark-green-221x47.png'"
+              src="{{ siteUrl }}img/msu-wordmark-green.svg"
+              onerror="this.src='img/msu-wordmark-green-221x47.png'"
           >
           <img class='print-msuwordmark' alt='Michigan State University Wordmark'
-          src='{{ siteUrl }}vendor/msu-bootstrap/img/msu-wordmark-black-221x47.png'>
+          src='{{ siteUrl }}img/msu-wordmark-black-221x47.png'>
         </a>
       </div>
     </footer>
   </div><!-- /.container -->
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="{{ siteUrl }}vendor/msu-bootstrap/js/bootstrap.min.js"></script>
+  <script src="{{ siteUrl }}build/app.js"></script>
 
   <!-- Fixes skip to content links in some browsers -->
   <script>

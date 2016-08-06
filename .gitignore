@@ -5,11 +5,11 @@ dandelion.yml
 sftp-config.json
 craft/config/db.php
 
-# Vendor Files
-src/vendor
-
 # Windows? Google Drive? Who knows?
 desktop.ini
 
 # Installed Packages
 node_modules
+
+# Build Directory
+public/build

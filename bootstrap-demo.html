@@ -6,7 +6,7 @@
         <title>MSU Bootstrap Preview</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="public/assets/css/app.css">
+        <link rel="stylesheet" type="text/css" href="public/build/app.css">
         <style>
         /* Example modals */
         .example-modal .modal {
@@ -43,12 +43,12 @@
 						<!-- this img "onerror" attribute allows non-SVG capable browsers to render the image -->
                     <img class="screen-msugraphic"
 						alt="Michigan State University"
-						src="img/masthead-helmet-green.svg"
+						src="public/img/masthead-helmet-green.svg"
 						onerror="this.src='img/masthead-helmet-green.png'" >
                         <!-- MSU Web Standards indicate the MSU masthead graphic should be printed black -->
                     <img class="print-msugraphic"
 						alt="Michigan State University"
-						src="img/masthead-helmet-black.png">
+						src="public/img/masthead-helmet-black.png">
 	                </a>
                 </div>
 
@@ -1198,29 +1198,17 @@
                         <!-- If using a dark background change the img src to images/msu-wordmark-white-221x47.png-->
                         <img class='screen-msuwordmark' alt='Michigan State University Wordmark'
 							width="221"
-							src="img/msu-wordmark-green.svg"
+							src="public/img/msu-wordmark-green.svg"
 							onerror="this.src='img/msu-wordmark-green-221x47.png'"
 							>
                         <img class='print-msuwordmark' alt='Michigan State University Wordmark'
-							src='img/msu-wordmark-black-221x47.png'>
+							src='public/img/msu-wordmark-black-221x47.png'>
                     </a>
                 </div>
             </footer>
         </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="bootstrap/js/transition.js"></script>
-        <script src="bootstrap/js/alert.js"></script>
-        <script src="bootstrap/js/modal.js"></script>
-        <script src="bootstrap/js/dropdown.js"></script>
-        <script src="bootstrap/js/scrollspy.js"></script>
-        <script src="bootstrap/js/tab.js"></script>
-        <script src="bootstrap/js/tooltip.js"></script>
-        <script src="bootstrap/js/popover.js"></script>
-        <script src="bootstrap/js/button.js"></script>
-        <script src="bootstrap/js/collapse.js"></script>
-        <script src="bootstrap/js/carousel.js"></script>
-        <script src="bootstrap/js/affix.js"></script>
+        <script src="public/build/app.js"></script>
         <script>
         (function() {
           $('[data-toggle="popover"]').popover();
