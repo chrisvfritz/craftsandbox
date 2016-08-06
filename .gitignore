@@ -5,9 +5,11 @@ dandelion.yml
 sftp-config.json
 craft/config/db.php
 
-# Vendor files
-public/vendor/msu-bootstrap
-public/vendor/bootstrap
+# Vendor Files
+src/vendor
 
 # Windows? Google Drive? Who knows?
 desktop.ini
+
+# Installed Packages
+node_modules
